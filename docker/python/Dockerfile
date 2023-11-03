@@ -22,7 +22,7 @@ WORKDIR /app
 # # pathを通す
 # ENV PATH="$PATH:/home/user/.local/bin"
 
-COPY docker/python/requirements.txt /app
+# COPY docker/python/requirements.txt /app
 
-RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt
+# RUN pip install --no-cache-dir --upgrade pip && \
+#     pip install --no-cache-dir -r requirements.txt
