@@ -15,7 +15,8 @@ fi
 
 
 WORKDIR="/app"
-CONTEST_DIR="${WORKDIR}/src/atcoder/abc"
+#CONTEST_DIR="${WORKDIR}/src/atcoder/abc"
+CONTEST_DIR="${WORKDIR}/atcoder/abc"
 PROBLEM_DIR="${CONTEST_DIR}/$1"
 TEMPLATE="${WORKDIR}/templates/atcoder.cpp"
 

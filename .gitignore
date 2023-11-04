@@ -9,6 +9,9 @@ tests/
 venv
 node_modules/
 db*
+archive/
+docker/
+src/
 
 # ---------------------------------------------
 # Python
