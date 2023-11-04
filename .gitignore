@@ -5,7 +5,8 @@ data/
 tests/
 .out
 .in
-.env.prod
+.env
+.prod
 venv
 node_modules/
 db*
