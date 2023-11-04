@@ -15,14 +15,14 @@ fi
 
 
 WORKDIR="/app"
-CONTEST_DIR="${WORKDIR}/src/atcoder/arc"
+CONTEST_DIR="${WORKDIR}/atcoder/arc"
 PROBLEM_DIR="${CONTEST_DIR}/$1"
 TEMPLATE="${WORKDIR}/templates/atcoder.cpp"
 
 ### arc172のフォルダを作成し，テストデータをダウンロードする
 mkdir -p $CONTEST_DIR
 cd $CONTEST_DIR
-acc new $1
+acc new $1 -c all
 
 ### ダウンロードしたテストデータに対して，cppファイルを作成する
 PROBLEMS="${PROBLEM_DIR}/*"

@@ -23,7 +23,7 @@ TEMPLATE="${WORKDIR}/templates/atcoder.cpp"
 ### abc172のフォルダを作成し，テストデータをダウンロードする
 mkdir -p $CONTEST_DIR
 cd $CONTEST_DIR
-acc new $1
+acc new $1 -c all
 
 ### ダウンロードしたテストデータに対して，cppファイルを作成する
 PROBLEMS="${PROBLEM_DIR}/*"

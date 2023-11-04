@@ -24,9 +24,8 @@ RUN apt update && \
     g++-9 \
     gdb \
     python3.9 \
-    python3-pip\
-    taskrunner
-
+    python3-pip
+    
 # C++でAtCoder Library(ACL)を使えるようにする
 RUN git clone https://github.com/atcoder/ac-library.git /lib/ac-library
 ENV CPLUS_INCLUDE_PATH /lib/ac-library
@@ -50,4 +49,5 @@ RUN npm install -g atcoder-cli@2.2.0
 # USER $USERNAME
 
 # コンテスト補助アプリケーションをインストール
-RUN pip install online-judge-tools==11.5.1
+RUN pip install online-judge-tools==11.5.1\
+    pip install vscode-task-runner

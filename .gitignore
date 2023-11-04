@@ -11,9 +11,10 @@ venv
 node_modules/
 db*
 archive/
-docker/
 src/other/
 docs/img/
+.prettierrc
+README_for_me.md
 
 # ---------------------------------------------
 # Python
