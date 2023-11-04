@@ -11,7 +11,8 @@ node_modules/
 db*
 archive/
 docker/
-src/
+src/other/
+docs/img/
 
 # ---------------------------------------------
 # Python

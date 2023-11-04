@@ -19,24 +19,22 @@ https://github.com/tf63/docker_images/tree/atcoder
     ├── .vscode
     │   ├── c_cpp_properties.json
     │   └── tasks.json
-    ├── cmd
+    ├── .cmd
     │   ├── abc_dl.sh
-    │   ├── arc_dl.sh
-    │   ├── other_dl.sh
-    │   └── typical.sh
-    ├── docker
+    │   └── arc_dl.sh
+    ├── .docker
     │   └── atcoder
     │       └── Dockerfile
-    ├── docker-compose.yml
-    ├── src
-    │   └── atcoder
-    │       ├── abc
-    │       │   └── abc001
-    │       ├── arc
-    │       │   └── arc001
-    │       └── other
-    └── templates
+    ├── .docker-compose.yml
+    ├── .src
+    │   └── abc
+    │       └── abc001
+    │       arc
+    │       └── arc001
+    │     
+    └── .templates
         ├── atcoder.cpp
+        ├── template.cpp
         └── input.txt
 ```
 
