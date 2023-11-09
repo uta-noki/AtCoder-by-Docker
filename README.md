@@ -9,13 +9,13 @@
 
 OS: macOS Ventura 13.5.2
 
-### 環境構築手法
-1. githubからpullする．
+## 1. 簡単に環境構築🎶
+### 1.1 githubからpullする．
 ```
 git pull https://github.com/entry-dotcom/docker_for_mac.git
 ```
 
-2. 作業ディレクトリ```workdir```に移動する．
+### 1.2. 作業ディレクトリ```workdir```に移動する．
 ```
 cd workdir
 ```
@@ -48,10 +48,19 @@ cd workdir
         └── input.txt
 ```
 
-3. docker imageをbuildしてcontainerを起動する．</br>
+### 1.3. docker imageをbuildしてcontainerを起動する．</br>
 ```
 docker run -it --name {container_name} {image_name}
 ```
+
+### 1.4. docker containerにattach
+
+### 1.5. vscodeの拡張機能であるtask runnerをインストールする．
+
+## 2. AtCoderのプログラミングから回答提出まで
+### 2.1
+### 2.2
+
 
 ---
 
@@ -72,3 +81,5 @@ dockerのあれこれについて参考にしました．
 [**AtCoder の環境を Docker で作りたい**](https://qiita.com/tf63/items/c93c6f24d73599e637d8)
 
 - `docs/atcoder.md`
+
+[**コマンドでDockerコンテナを停止・削除、イメージの削除をする**](https://qiita.com/shisama/items/48e2eaf1dc356568b0d7)
