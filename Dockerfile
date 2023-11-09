@@ -49,5 +49,5 @@ RUN npm install -g atcoder-cli@2.2.0
 # USER $USERNAME
 
 # コンテスト補助アプリケーションをインストール
-RUN pip install online-judge-tools==11.5.1\
-    pip install vscode-task-runner
+RUN pip install online-judge-tools==11.5.1
+RUN pip code --install-extension SanaAjani.taskrunnercode

@@ -79,8 +79,8 @@ services:
   atcoder:
     build:
       context: .
-      dockerfile: docker/atcoder/Dockerfile
-    container_name: atcoder
+      dockerfile: Dockerfile
+    container_name: atcoder2
     stdin_open: true
     tty: true
     volumes:
