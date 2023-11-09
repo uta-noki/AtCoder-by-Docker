@@ -9,11 +9,51 @@
 
 OS: macOS Ventura 13.5.2
 
+### 環境構築手法
+1. githubからpullする．
+```
+git pull https://github.com/entry-dotcom/docker_for_mac.git
+```
+
+2. 作業ディレクトリ```workdir```に移動する．
+```
+cd workdir
+```
+ディレクトリ構成は以下の通り
+
+```
+ workdir
+    .
+    ├── .devcontainer
+    │   └── devcontainer.json
+    ├── .vscode
+    │   ├── c_cpp_properties.json
+    │   └── tasks.json
+    ├── .cmd
+    │   ├── abc_dl.sh
+    │   └── arc_dl.sh
+    ├── .docker
+    │   └── atcoder
+    │       └── Dockerfile
+    ├── .docker-compose.yml
+    ├── .src
+    │   └── abc
+    │       └── abc001
+    │       arc
+    │       └── arc001
+    │     
+    └── .templates
+        ├── atcoder.cpp
+        ├── template.cpp
+        └── input.txt
+```
+
+3. docker imageをbuildする．</br>
+```
+docker build .
+```
+
 ---
-### 要注意!!!
-開催中のコンテストでは，始めに</br>
-```oj login https://atcoder.jp/ -u username -p password```</br>
-でログインする必要あり！！！
 
 ### 参考リンク
 dockerのあれこれについて参考にしました．
@@ -25,10 +65,6 @@ dockerのあれこれについて参考にしました．
 
 - `docs/docker.md`
 
-[**Ubuntu で Docker のインストール**](https://qiita.com/tf63/items/c21549ba44224722f301)
-
-- `docs/docker_install.md`
-
 **Docker + Python の環境を作りたい**
 
 - `docs/python.md`
@@ -36,14 +72,3 @@ dockerのあれこれについて参考にしました．
 [**AtCoder の環境を Docker で作りたい**](https://qiita.com/tf63/items/c93c6f24d73599e637d8)
 
 - `docs/atcoder.md`
-
-
-
-int n;
-string s;
-cin >> n >> s;
-
-rep(i,n-1) {
-    if ((s.at(i)=='a' && s.at(i+1)=='b' || s.at(i)=='b' && s.at(i+1)=='a')) {cout << "Yes" << "\n"; return 0;}
-}
-cout << "No" << "\n";
