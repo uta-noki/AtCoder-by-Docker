@@ -48,9 +48,9 @@ cd workdir
         └── input.txt
 ```
 
-3. docker imageをbuildする．</br>
+3. docker imageをbuildしてcontainerを起動する．</br>
 ```
-docker build .
+docker run -it --name {container_name} {image_name}
 ```
 
 ---
