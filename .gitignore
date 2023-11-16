@@ -16,9 +16,11 @@ docs/img/
 .prettierrc
 README_for_me.md
 
-atcoder folder
-abc/*
-!abc/!arc100/*
+# atcoder folder
+atcoder/abc/*
+!atcoder/abc/abc100/
+atcoder/arc/*
+!atcoder/arc/arc100/
 
 # ---------------------------------------------
 # Python
