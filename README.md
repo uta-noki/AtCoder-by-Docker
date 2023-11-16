@@ -12,7 +12,7 @@ OS: macOS Ventura 13.5.2
 ## 1. 簡単に環境構築🎶
 ### 1.1 githubからpullする．
 ```
-git pull https://github.com/entry-dotcom/docker_for_mac.git
+git clone https://github.com/entry-dotcom/docker_for_mac.git
 ```
 
 ### 1.2. 作業ディレクトリ```workdir```に移動する．
@@ -54,6 +54,9 @@ docker run -it --name {container_name} {image_name}
 ```
 
 ### 1.4. docker containerにattach
+```
+docker attach {container_name}
+```
 
 ### 1.5. vscodeの拡張機能であるtask runnerをインストールする．
 
