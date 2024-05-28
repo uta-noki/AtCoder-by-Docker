@@ -35,7 +35,10 @@ vector<int> dj = {-1,0,1,-1,1,-1,0,1}, di = {-1,-1,-1,0,0,1,1,1};
 
 int main() {
 
-    
+    ll n;
+    cin >> n;
+
+    cout << (n-1)*n/2 << "\n";
 
     return 0;
 }
