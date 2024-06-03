@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 #include <atcoder/all>
 using namespace std;
+using namespace atcoder;
+
 typedef long long ll;
 typedef unsigned long long ull;
 #define rep(i, start, n) for (int i = start; i < (int)(n); i++)
@@ -77,17 +79,32 @@ ll div_ceil(ll a, ll b) {
 //　グリッド探索変数
 vector<int> dj = {-1,0,1,-1,1,-1,0,1}, di = {-1,-1,-1,0,0,1,1,1};
 
+using mint = modint998244353;
+
 int main() {
 
-    string s, t;
-    cin >> s >> t;
+    ll n, m;
+    cin >> n >> m;
+    mint ans;
 
-    sort(s.begin(), s.end());
-    sort(t.begin(), t.end());
-    reverse(t.begin(),t.end());
+    if (n==0 || m==0) {
+      cout << 0 << "\n";
+      return 0;
+    }
 
-    if (s<t) cout << "Yes" << "\n";
-    else cout << "No" << "\n";
+    rep(bit,0,60) {
+      // cout << ans << " ";
+      if ((m>>bit) & 1) {
+        ll p = 2LL<<bit, r = n%p;
+        ans += (n-r)/2;
+        if (r >= (1LL<<bit)) {
+          ans += r - (1LL<<bit) + 1;
+        }
+      }
+      // ans %= mod1;
+    }
+
+    cout << ans.val() << "\n";
 
     return 0;
 }

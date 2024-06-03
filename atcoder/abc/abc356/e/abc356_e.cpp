@@ -79,15 +79,13 @@ vector<int> dj = {-1,0,1,-1,1,-1,0,1}, di = {-1,-1,-1,0,0,1,1,1};
 
 int main() {
 
-    string s, t;
-    cin >> s >> t;
+    ll n;
+    cin >> n;
+    vector<ll> a(n,0);
 
-    sort(s.begin(), s.end());
-    sort(t.begin(), t.end());
-    reverse(t.begin(),t.end());
+    rep(i,0,n) cin >> a.at(i);
 
-    if (s<t) cout << "Yes" << "\n";
-    else cout << "No" << "\n";
+    
 
     return 0;
 }

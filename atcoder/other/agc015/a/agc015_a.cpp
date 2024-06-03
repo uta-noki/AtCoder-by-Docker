@@ -79,15 +79,14 @@ vector<int> dj = {-1,0,1,-1,1,-1,0,1}, di = {-1,-1,-1,0,0,1,1,1};
 
 int main() {
 
-    string s, t;
-    cin >> s >> t;
+    ll n, a, b, mn, mx;
+    cin >> n >> a >> b;
 
-    sort(s.begin(), s.end());
-    sort(t.begin(), t.end());
-    reverse(t.begin(),t.end());
+    if (a>b) {cout << 0 << "\n"; return 0;}
+    if (n==1 && a!=b) {cout << 0 << "\n"; return 0;}
+      
 
-    if (s<t) cout << "Yes" << "\n";
-    else cout << "No" << "\n";
+    cout << (b-a)*(n-2)+1 << "\n";
 
     return 0;
 }

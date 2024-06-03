@@ -79,15 +79,33 @@ vector<int> dj = {-1,0,1,-1,1,-1,0,1}, di = {-1,-1,-1,0,0,1,1,1};
 
 int main() {
 
-    string s, t;
-    cin >> s >> t;
+    int n, m, k, ans = 0;
+    cin >> n >> m >> k;
+    vector<int> c(m,0);
+    vector<char> r(m);
+    vector<vector<int>> a(m);
 
-    sort(s.begin(), s.end());
-    sort(t.begin(), t.end());
-    reverse(t.begin(),t.end());
+    rep(i,0,m) {
+      cin >> c.at(i);
+      vector<int> a_i(c.at(i),0);
+      rep(j,0,c.at(i)) cin >> a_i.at(j);
+      a.at(i) = a_i;
+      cin >> r.at(i);
+    }
+    
+    rep(bit,0,1<<n) {
+      int check = 0;
+      rep(j,0,m) {
+        int cnt = 0;
+        rep(k,0,c.at(j)) {
+          if (bit & (1<<(a.at(j).at(k)-1))) cnt++;
+        }
+        if ((cnt>=k && r.at(j)=='o') || (cnt<k && r.at(j)=='x')) check++;
+      }
+      if (check==m) ans++;
+    }
 
-    if (s<t) cout << "Yes" << "\n";
-    else cout << "No" << "\n";
+    cout << ans << "\n";
 
     return 0;
 }

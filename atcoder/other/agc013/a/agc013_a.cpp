@@ -79,15 +79,25 @@ vector<int> dj = {-1,0,1,-1,1,-1,0,1}, di = {-1,-1,-1,0,0,1,1,1};
 
 int main() {
 
-    string s, t;
-    cin >> s >> t;
+    ll n, cnt = 1;
+    cin >> n;
+    vector<int> a(n,0);
 
-    sort(s.begin(), s.end());
-    sort(t.begin(), t.end());
-    reverse(t.begin(),t.end());
+    rep(i,0,n) cin >> a.at(i);
 
-    if (s<t) cout << "Yes" << "\n";
-    else cout << "No" << "\n";
+    bool is_up = false, is_down = false;
 
+    rep(i,0,n-1) {
+      if (a.at(i)<a.at(i+1)) is_up = true;
+      if (a.at(i)>a.at(i+1)) is_down = true;
+      if (is_up && is_down) {
+        cnt++;
+        is_up = false;
+        is_down = false;
+      }
+    }
+
+    cout << cnt << "\n";
+    
     return 0;
 }
