@@ -33,13 +33,10 @@ OS: macOS Ventura 13.5.2
 
 - `docs/atcoder.md`
 
-
-
-int n;
-string s;
-cin >> n >> s;
-
-rep(i,n-1) {
-    if ((s.at(i)=='a' && s.at(i+1)=='b' || s.at(i)=='b' && s.at(i+1)=='a')) {cout << "Yes" << "\n"; return 0;}
-}
-cout << "No" << "\n";
+### 環境構築手順
+1. 前提条件
+   まずはdocker Desktopをインストールします．
+2. プロジェクトをcloneする．
+   - `git clone git@github.com:uta-noki/AtCoder-by-Docker.git
+3. docker-compose で Dockerfile から image をビルドする
+   docker-compose build
