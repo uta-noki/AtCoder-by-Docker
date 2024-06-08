@@ -37,6 +37,6 @@ OS: macOS Ventura 13.5.2
 ### 1. 前提条件
    まずはdocker Desktopをインストールします．
 ### 2. プロジェクトをcloneする．
-   - `git clone git@github.com:uta-noki/AtCoder-by-Docker.git
+   </br> ```git clone git@github.com:uta-noki/AtCoder-by-Docker.git```</br>
 ### 3. docker-compose で Dockerfile から image をビルドする
-   - `docker-compose build
+   </br> ```docker-compose build```</br>
