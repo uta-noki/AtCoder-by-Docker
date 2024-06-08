@@ -1,3 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Copy Button Example</title>
+</head>
+<body>
+    <pre id="code">git clone https://github.com/your-repository.git</pre>
+    <button onclick="copyToClipboard()">Copy</button>
+
+    <script>
+        function copyToClipboard() {
+            var copyText = document.getElementById("code").innerText;
+            var textArea = document.createElement("textarea");
+            textArea.value = copyText;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textArea);
+            alert("Copied to clipboard!");
+        }
+    </script>
+</body>
+</html>
+
 ### Docker サンプル など
 
 - 勉強会用の Docker イメージをまとめておく場所
