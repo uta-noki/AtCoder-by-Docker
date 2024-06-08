@@ -39,4 +39,6 @@ OS: macOS Ventura 13.5.2
 ### 1. プロジェクトをcloneする．
     git clone git@github.com:uta-noki/AtCoder-by-Docker.git　
 ### 2. docker-compose で Dockerfile から image をビルドする
-   　　cd docker-compose build
+   　　```bash
+      docker-compose up --build
+      ```
