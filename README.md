@@ -43,7 +43,7 @@ docker-compose build
 <title>Copy Button Example</title>
 </head>
 <body>
-    <pre id="code">git clone git@github.com:uta-noki/AtCoder-by-Docker.git</pre>
+    <pre id="code">git clone https://github.com/your-repository.git</pre>
     <button onclick="copyToClipboard()">Copy</button>
 
     <script>
