@@ -8,13 +8,14 @@ ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Asia/Tokyo
 
 WORKDIR /app
+VOLUME /app
 
 # 起動シェルをshからbashに変更
 SHELL ["/bin/bash", "-c"]
 
 # パッケージなど
-RUN apt update && \
-    apt install -y \
+RUN apt-get update && \
+    apt-get install -y \
     time \
     tzdata \
     tree \
@@ -24,7 +25,9 @@ RUN apt update && \
     g++-9 \
     gdb \
     python3.9 \
-    python3-pip
+    python3-pip\
+    curl -fsSL https://deb.nodesource.com/setup_14.x | bash - && \
+    apt-get install -y nodejs
     
 # C++でAtCoder Library(ACL)を使えるようにする
 RUN git clone https://github.com/atcoder/ac-library.git /lib/ac-library

@@ -35,7 +35,34 @@ vector<int> dj = {-1,0,1,-1,1,-1,0,1}, di = {-1,-1,-1,0,0,1,1,1};
 
 int main() {
 
-    
+    int n, m, cnt = 0;
+    ll ans = 0;
+    cin >> n >> m;
+    // vector<int> a(n,0), b(n,0);
+    vector<pair<int,int>> ab(n);
+
+    rep(i,0,n) cin >> ab.at(i).first >> ab.at(i).second;
+
+    // sort(ab.begin(),ab.end(),[&](pair<int,int>& a, pair<int,int>& b)) {
+    //     return a.second < b.second;
+    // };
+
+    // auto compareSecond = [](const std::pair<int, int>& a, const std::pair<int, int>& b) {
+    //     return a.second < b.second;
+    // };
+
+    sort(ab.begin(),ab.end());
+
+    rep(i,0,n) {
+        if (cnt==m) break;
+        if (cnt<m) {
+            int num = min(ab.at(i).second,m-cnt);
+            cnt += num;
+            ans += (ll)ab.at(i).first * num;
+        }
+    }
+
+    cout << ans << "\n";
 
     return 0;
 }

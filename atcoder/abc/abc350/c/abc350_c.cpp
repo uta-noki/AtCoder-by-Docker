@@ -78,36 +78,75 @@ ll div_ceil(ll a, ll b) {
 vector<int> dj = {-1,0,1,-1,1,-1,0,1}, di = {-1,-1,-1,0,0,1,1,1};
 
 // ソート中の交換回数と交換された値を記録する関数
-int bubbleSortWithCount(vector<int>& arr) {
-    int n = arr.size();
-    int swapCount = 0;
+// int bubbleSortWithCount(vector<int>& arr) {
+//     int n = arr.size();
+//     int swapCount = 0;
     
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = 0; j < n - i - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-                // 値の交換
-                swap(arr[j], arr[j + 1]);
-                swapCount++;
-                // 交換された値を表示
-                cout << "Swapped: " << arr[j] << " and " << arr[j + 1] << endl;
-            }
-        }
-    }
+//     for (int i = 0; i < n - 1; i++) {
+//         for (int j = 0; j < n - i - 1; j++) {
+//             if (arr[j] > arr[j + 1]) {
+//                 // 値の交換
+//                 swap(arr[j], arr[j + 1]);
+//                 swapCount++;
+//                 // 交換された値を表示
+//                 cout << "Swapped: " << arr[j] << " and " << arr[j + 1] << endl;
+//             }
+//         }
+//     }
 
-    return swapCount;
-}
+//     return swapCount;
+// }
 
 int main() {
 
     int n, swaps=0;
     cin >> n;
     vector<int> a(n,0), pos(n,0);
-
-    rep(i,0,n) cin >> a.at(i);
+    vector<pair<int,int>> ans;
 
     rep(i,0,n) {
-      if (a.at(i)!=i+1) 
+      cin >> a.at(i);
+      a.at(i)--;
+      pos.at(a.at(i)) = i;
     }
+    // rep(i,0,n) cout << pos.at(i) << " ";
+    // cout << endl;
+
+    // rep(i,0,n) cout << pos.at(i) << " ";
+    rep(i,0,n) {
+      if (a.at(i)!=i) {
+        ans.push_back({i,pos.at(i)});
+        pos.at(a.at(i)) = pos.at(i);
+        a.at(pos.at(i)) = a.at(i);
+        pos.at(i) = i;
+        a.at(i) = i;
+        // swap(pos.at(i),a.at(pos.at(i)));
+        
+        swaps++;
+      }
+    }
+
+    // rep(i,0,n) {
+    //   if (a.at(i)==i) continue;
+    //   rep(j,i+1,n) {
+        
+    //     if (i==a.at(j)) {
+    //       ans.push_back({j,a.at(i)});
+    //       swap(a.at(i),a.at(j));
+    //       swaps++;
+    //     }
+    //   }
+    // }
+
+    // rep(i,0,(int)ans.size()) if (ans.at(i).first==ans.at(i).second) swaps--;
+
+    cout << swaps << "\n";
+    rep(i,0,(int)ans.size()) {
+      // if (ans.at(i).first==ans.at(i).second) continue;
+      cout << ans.at(i).first+1 << " " << ans.at(i).second+1 << "\n";
+    }
+
+    
 
     return 0;
 }

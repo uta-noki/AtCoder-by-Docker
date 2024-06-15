@@ -35,7 +35,30 @@ vector<int> dj = {-1,0,1,-1,1,-1,0,1}, di = {-1,-1,-1,0,0,1,1,1};
 
 int main() {
 
-    
+    int n, m;
+    cin >> n >> m;
+    vector<int> s(m,0), c(m,0);
+    rep(i,0,m) cin >> s.at(i) >> c.at(i);
+
+    rep(i,0,1000) {
+        string mozi = to_string(i);
+        // cout << mozi << 
+        // cout << mozi << " ";
+        if ((int)mozi.size()==n) {
+            // cout << mozi << " ";
+            bool check = true;
+            rep(j,0,m) {
+                if (mozi.at(s.at(j)-1)!=(c.at(j)+'0')) check = false;
+            }
+            if (check) {
+                cout << mozi << "\n";
+                return 0;
+            }
+        }
+       
+    }
+
+    cout << -1 << "\n";
 
     return 0;
 }

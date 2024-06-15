@@ -79,18 +79,35 @@ vector<int> dj = {-1,0,1,-1,1,-1,0,1}, di = {-1,-1,-1,0,0,1,1,1};
 
 int main() {
 
-    ll x, y, num;
-    cin >> x >> y;
-    vector<ll> ans;
+    vector<vector<int>> c(3,vector<int>(3,0));
+    vector<int> a(3,0), b(3,0);
 
-    num = x;
+    rep(i,0,3) rep(j,0,3) cin >> c.at(i).at(j);
 
-    while(num<=y) {
-      ans.push_back(num);
-      num *= 2;
+    rep(a1,0,101) {
+      rep(a2,0,101) {
+        rep(a3,0,101) {
+          a.at(0) = a1;
+          a.at(1) = a2;
+          a.at(2) = a3;
+          b.at(0) = c.at(0).at(0) - a1;
+          b.at(1) = c.at(0).at(1) - a1;
+          b.at(2) = c.at(0).at(2) - a1;
+          bool ok = true;
+          rep(i,0,3) {
+            rep(j,0,3) {
+              if (c.at(i).at(j)!=a.at(i)+b.at(j)) ok = false;
+            }
+          }
+          if (ok) {
+            cout << "Yes" << "\n";
+            return 0;
+          }
+        }
+      }
     }
 
-    cout << ans.size() << "\n";
+    cout << "No" << "\n";
 
     return 0;
 }

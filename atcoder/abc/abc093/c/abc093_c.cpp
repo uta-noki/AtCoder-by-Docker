@@ -78,10 +78,21 @@ vector<int> dj = {-1,0,1,-1,1,-1,0,1}, di = {-1,-1,-1,0,0,1,1,1};
 
 int main() {
 
-    int a, b, c;
-    cin >> a >> b >> c;
+    vector<int> abc(3);
+    rep(i,0,3) cin >> abc.at(i);
+    int cnt = 0, odd = 0;
+    
+    rep(i,0,3) if (abc.at(i)%2==1) odd++;
 
-    if (a%2==0 )
+    if (odd==1 || odd==2) {
+      cnt++;
+      if (odd==1) rep(i,0,3) if (abc.at(i)%2==0) abc.at(i)++;
+      if (odd==2) rep(i,0,3) if (abc.at(i)%2==1) abc.at(i)++;
+    }
+    
+    rep(i,0,3) cnt += (*max_element(abc.begin(),abc.end()) - abc.at(i))/2;
+
+    cout << cnt << "\n";
 
     return 0;
 }

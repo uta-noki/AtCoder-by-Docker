@@ -77,7 +77,30 @@ vector<int> dj = {-1,0,1,-1,1,-1,0,1}, di = {-1,-1,-1,0,0,1,1,1};
 
 int main() {
 
-    
+    int n;
+    cin >> n;
+    vector<int> s(n,0);
+
+    rep(i,0,n) cin >> s.at(i);
+
+    int ans = 0;
+    ans = accumulate(s.begin(), s.end(),0);
+
+    if (ans%10!=0) {
+      cout << ans << "\n";
+      return 0;
+    }
+
+    sort(s.begin(), s.end());
+
+    rep(i,0,n) {
+      if (s.at(i)%10!=0) {
+        cout << ans - s.at(i) << "\n";
+        return 0;
+      }
+    }
+
+    cout << 0 << "\n";
 
     return 0;
 }

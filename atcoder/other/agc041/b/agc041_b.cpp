@@ -79,7 +79,18 @@ vector<int> dj = {-1,0,1,-1,1,-1,0,1}, di = {-1,-1,-1,0,0,1,1,1};
 
 int main() {
 
-    
+    int r, g, b, n;
+    cin >> r >> g >> b >> n;
+
+    set<vector<int>> st;
+
+    rep(i,0,r) {
+      rep(j,0,g) {
+        if (n-i-j<=b) st.insert({i,j,n-i-j});
+      }
+    }
+
+    cout << st.size() << "\n";
 
     return 0;
 }
