@@ -1,16 +1,15 @@
-# .cache/*
-# .config/*
+.cache/*
+.config/*
 # .devcontainer/*
-# .dotnet/*
-# .local/*
-# .ssh/*
-# .vscode-server/
+.dotnet/
+.local/
+.ssh/
+.vscode-server/
 # .vscode/
 # .bash_history
 # .clang-format
 # .gitconfig
 # .prettierrc
-.**/
 docs/img/
 # atcoder/abc/abc356/
 # atcoder/**/**/tests
