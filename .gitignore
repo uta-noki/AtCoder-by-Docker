@@ -11,5 +11,5 @@
 # .gitconfig
 # .prettierrc
 docs/img/
-# atcoder/abc/abc356/
+atcoder/**/**/**/tests/
 # atcoder/**/**/tests

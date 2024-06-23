@@ -1,0 +1,49 @@
+{
+  "contest": {
+    "id": "arc094",
+    "title": "AtCoder Regular Contest 094",
+    "url": "https://atcoder.jp/contests/arc094"
+  },
+  "tasks": [
+    {
+      "id": "arc094_a",
+      "label": "C",
+      "title": "Same Integers",
+      "url": "https://atcoder.jp/contests/arc094/tasks/arc094_a",
+      "directory": {
+        "path": "c",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "arc094_b",
+      "label": "D",
+      "title": "Worst Case",
+      "url": "https://atcoder.jp/contests/arc094/tasks/arc094_b",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "arc094_c",
+      "label": "E",
+      "title": "Tozan and Gezan",
+      "url": "https://atcoder.jp/contests/arc094/tasks/arc094_c",
+      "directory": {
+        "path": "e",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "arc094_d",
+      "label": "F",
+      "title": "Normalization",
+      "url": "https://atcoder.jp/contests/arc094/tasks/arc094_d",
+      "directory": {
+        "path": "f",
+        "testdir": "tests"
+      }
+    }
+  ]
+}

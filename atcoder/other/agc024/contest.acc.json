@@ -1,0 +1,69 @@
+{
+  "contest": {
+    "id": "agc024",
+    "title": "AtCoder Grand Contest 024",
+    "url": "https://atcoder.jp/contests/agc024"
+  },
+  "tasks": [
+    {
+      "id": "agc024_a",
+      "label": "A",
+      "title": "Fairness",
+      "url": "https://atcoder.jp/contests/agc024/tasks/agc024_a",
+      "directory": {
+        "path": "a",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "agc024_b",
+      "label": "B",
+      "title": "Backfront",
+      "url": "https://atcoder.jp/contests/agc024/tasks/agc024_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "agc024_c",
+      "label": "C",
+      "title": "Sequence Growing Easy",
+      "url": "https://atcoder.jp/contests/agc024/tasks/agc024_c",
+      "directory": {
+        "path": "c",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "agc024_d",
+      "label": "D",
+      "title": "Isomorphism Freak",
+      "url": "https://atcoder.jp/contests/agc024/tasks/agc024_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "agc024_e",
+      "label": "E",
+      "title": "Sequence Growing Hard",
+      "url": "https://atcoder.jp/contests/agc024/tasks/agc024_e",
+      "directory": {
+        "path": "e",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "agc024_f",
+      "label": "F",
+      "title": "Simple Subsequence Problem",
+      "url": "https://atcoder.jp/contests/agc024/tasks/agc024_f",
+      "directory": {
+        "path": "f",
+        "testdir": "tests"
+      }
+    }
+  ]
+}

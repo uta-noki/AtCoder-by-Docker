@@ -1,0 +1,99 @@
+{
+  "contest": {
+    "id": "adt_all_20240618_1",
+    "title": "AtCoder Daily Training ALL 2024/06/18 15:30start",
+    "url": "https://atcoder.jp/contests/adt_all_20240618_1"
+  },
+  "tasks": [
+    {
+      "id": "abc266_a",
+      "label": "A",
+      "title": "Middle  Letter",
+      "url": "https://atcoder.jp/contests/adt_all_20240618_1/tasks/abc266_a",
+      "directory": {
+        "path": "a",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "abc221_a",
+      "label": "B",
+      "title": "Seismic magnitude scales",
+      "url": "https://atcoder.jp/contests/adt_all_20240618_1/tasks/abc221_a",
+      "directory": {
+        "path": "b",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "abc338_b",
+      "label": "C",
+      "title": "Frequency",
+      "url": "https://atcoder.jp/contests/adt_all_20240618_1/tasks/abc338_b",
+      "directory": {
+        "path": "c",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "abc252_b",
+      "label": "D",
+      "title": "Takahashi's Failure",
+      "url": "https://atcoder.jp/contests/adt_all_20240618_1/tasks/abc252_b",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "abc283_c",
+      "label": "E",
+      "title": "Cash Register",
+      "url": "https://atcoder.jp/contests/adt_all_20240618_1/tasks/abc283_c",
+      "directory": {
+        "path": "e",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "abc332_c",
+      "label": "F",
+      "title": "T-shirts",
+      "url": "https://atcoder.jp/contests/adt_all_20240618_1/tasks/abc332_c",
+      "directory": {
+        "path": "f",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "abc256_d",
+      "label": "G",
+      "title": "Union of Interval",
+      "url": "https://atcoder.jp/contests/adt_all_20240618_1/tasks/abc256_d",
+      "directory": {
+        "path": "g",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "abc234_e",
+      "label": "H",
+      "title": "Arithmetic Number",
+      "url": "https://atcoder.jp/contests/adt_all_20240618_1/tasks/abc234_e",
+      "directory": {
+        "path": "h",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "abc239_f",
+      "label": "I",
+      "title": "Construct Highway",
+      "url": "https://atcoder.jp/contests/adt_all_20240618_1/tasks/abc239_f",
+      "directory": {
+        "path": "i",
+        "testdir": "tests"
+      }
+    }
+  ]
+}
