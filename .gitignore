@@ -1,15 +1,17 @@
-.cache/*
-.config/*
-# .devcontainer/*
-.dotnet/
-.local/
-.ssh/
-.vscode-server/
-# .vscode/
-# .bash_history
-# .clang-format
-# .gitconfig
-# .prettierrc
+# my
+out/
+data/
+.DS_Store
+tests/
+.out
+.in
+.env
+.prod
+venv
+node_modules/
+db*
+archive/
+src/other/
 docs/img/
 atcoder/**/**/**/tests/
 # atcoder/**/**/tests
