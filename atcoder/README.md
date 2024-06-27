@@ -32,3 +32,6 @@ OS: macOS Ventura 13.5.2
 [**AtCoder の環境を Docker で作りたい**](https://qiita.com/tf63/items/c93c6f24d73599e637d8)
 
 - `docs/atcoder.md`
+
+権限あげる（dockerコンテナ作成時に何故かできていない...）
+chmod +x /app/cmd/abc_dl.sh

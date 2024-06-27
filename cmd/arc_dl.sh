@@ -19,17 +19,46 @@ CONTEST_DIR="${WORKDIR}/atcoder/arc"
 PROBLEM_DIR="${CONTEST_DIR}/$1"
 TEMPLATE="${WORKDIR}/templates/atcoder.cpp"
 
+
+# コンテストディレクトリが存在しなければ全てダウンロードする
+if [ ! -d "$PROBLEM_DIR" ]; then
+    mkdir -p $CONTEST_DIR
+    cd $CONTEST_DIR
+    acc new $1 -c all
+    PROBLEMS="${PROBLEM_DIR}/*"
+    for DIRPATH in $PROBLEMS; do
+        if [ ! -d $DIRPATH ]; then
+            continue
+        fi
+
+        cp -n $TEMPLATE "${DIRPATH}/$1_${DIRPATH##*/}.cpp"
+    done
+else
+# テストディレクトリだけが存在しなければ，ダウンロードする
+    mkdir -p "atcoder/arc/$1/temp/"
+    cd "atcoder/arc/$1/temp/"
+    acc new $1 -c all
+
+    problems_list=("a" "b" "c" "d" "e" "f" "h")
+    for (( i=0; i<${#problems_list[@]}; i++ )); do
+        if [ -d "$1/${problems_list[$i]}/tests" ]; then
+            cp -r "$1/${problems_list[$i]}/tests" "../../$1/${problems_list[$i]}"
+        fi
+    done
+
+    rm -r "../temp/"
+fi
 ### arc172のフォルダを作成し，テストデータをダウンロードする
-mkdir -p $CONTEST_DIR
-cd $CONTEST_DIR
-acc new $1 -c all
+# mkdir -p $CONTEST_DIR
+# cd $CONTEST_DIR
+# acc new $1 -c all
 
-### ダウンロードしたテストデータに対して，cppファイルを作成する
-PROBLEMS="${PROBLEM_DIR}/*"
-for DIRPATH in $PROBLEMS; do
-    if [ ! -d $DIRPATH ]; then
-        continue
-    fi
+# ### ダウンロードしたテストデータに対して，cppファイルを作成する
+# PROBLEMS="${PROBLEM_DIR}/*"
+# for DIRPATH in $PROBLEMS; do
+#     if [ ! -d $DIRPATH ]; then
+#         continue
+#     fi
 
-    cp -n $TEMPLATE "${DIRPATH}/$1_${DIRPATH##*/}.cpp"
-done
+#     cp -n $TEMPLATE "${DIRPATH}/$1_${DIRPATH##*/}.cpp"
+# done
