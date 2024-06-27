@@ -35,7 +35,28 @@ vector<int> dj = {-1,0,1,-1,1,-1,0,1}, di = {-1,-1,-1,0,0,1,1,1};
 
 int main() {
 
-    
+    int x;
+    cin >> x;
+    x %= 615;
+    if (x==0) {
+        cout << 1 << "\n";
+        return 0;
+    }
+    vector<int> cost(6,100);
+    rep(i,0,6) cost.at(i) += i;
+
+    for (int bit=0; bit<(1<<6); bit++) {
+        int check = 0;
+        rep(i,0,6) {
+            if (bit & (1<<i)) check += cost.at(i);
+        }
+        if (x==check) {
+            cout << 1 << "\n";
+            return 0;
+        }
+    }
+
+    cout << 0 << "\n";
 
     return 0;
 }

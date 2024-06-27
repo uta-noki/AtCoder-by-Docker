@@ -71,45 +71,13 @@ vector<string> Palindrome(string s) {
         }
     return palindrome_vector;
 }
-ll div_ceil(ll a, ll b) {
-  return (b >= 0 ? (a+b-1):a)/b;
-}
+
 //　グリッド探索変数
 vector<int> dj = {-1,0,1,-1,1,-1,0,1}, di = {-1,-1,-1,0,0,1,1,1};
 
 int main() {
 
-    double n, k;
-    double ans = 0;
-    cin >> n >> k;
-    vector<double> p(n,0), p_sum(1000,0), p_sum2(n,0);
-    p_sum.at(0) = 1;
-
-    rep(i,1,1000) {
-      p_sum.at(i) = p_sum.at(i-1)+(double)i+1;
-    }
-    rep(i,0,1000) {
-      p_sum.at(i) /= (i+1);
-    }
-    // rep(i,0,10) cout << p_sum.at(i) << " ";
-
-    rep(i,0,n) cin >> p.at(i);
-
-    rep(i,0,n) {
-      p_sum2.at(i) = p_sum.at(p.at(i)-1);
-    }
-
-    rep(i,0,10) cout << p_sum2.at(i) << " ";
-
-    rep(i,0,k) ans += p_sum2.at(i);
-    cout << ans << endl;
-
-    rep(i,0,n-k+1) {
-      cout << ans-p_sum2.at(i)+p_sum2.at(i+k-1) << " ";
-      // chmax(ans,ans-p_sum2.at(i)+p_sum2.at(i+k));
-    }
-
-    cout << fixed << setprecision(12) << ans << "\n";
+    
 
     return 0;
 }

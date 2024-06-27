@@ -79,37 +79,43 @@ vector<int> dj = {-1,0,1,-1,1,-1,0,1}, di = {-1,-1,-1,0,0,1,1,1};
 
 int main() {
 
-    double n, k;
-    double ans = 0;
-    cin >> n >> k;
-    vector<double> p(n,0), p_sum(1000,0), p_sum2(n,0);
-    p_sum.at(0) = 1;
+    string s;
+    ll sz, ans = 0;
+    // vector<ll> ans;
+    cin >> s;
+    sz = s.size() + 1;
+    vector<ll> equal(sz,0);
+    // ans.push_back(0);
 
-    rep(i,1,1000) {
-      p_sum.at(i) = p_sum.at(i-1)+(double)i+1;
-    }
-    rep(i,0,1000) {
-      p_sum.at(i) /= (i+1);
-    }
-    // rep(i,0,10) cout << p_sum.at(i) << " ";
-
-    rep(i,0,n) cin >> p.at(i);
-
-    rep(i,0,n) {
-      p_sum2.at(i) = p_sum.at(p.at(i)-1);
+    // if (s.at(0)=='<') equal.at(0) = 1;
+    rep(i,0,sz-1) {
+      if (s.at(i)=='<') {
+        chmax(equal.at(i+1),equal.at(i)+1);
+      }
     }
 
-    rep(i,0,10) cout << p_sum2.at(i) << " ";
-
-    rep(i,0,k) ans += p_sum2.at(i);
-    cout << ans << endl;
-
-    rep(i,0,n-k+1) {
-      cout << ans-p_sum2.at(i)+p_sum2.at(i+k-1) << " ";
-      // chmax(ans,ans-p_sum2.at(i)+p_sum2.at(i+k));
+    // if (s.at(sz-1)=='>') equal.at(sz-1) = 1;
+    for (int i=sz-2; i>=0; i--) {
+      if (s.at(i)=='>') {
+        equal.at(i) = max(equal.at(i+1)+1, equal.at(i));
+      }
     }
 
-    cout << fixed << setprecision(12) << ans << "\n";
+    // rep(i,0,sz) cout << equal.at(i) << " ";
+      
+    // rep(i,0,sz) {
+    //   if (i==0 || i==sz-1) continue;
+    //   else {
+    //     if (s.at(i-1)=='<' && s.at(i+1)=='>') ans += max(equal.at(i-1),equal.at(i+1));
+    //     // else if (s.at(i-1)=='>' && s.at(i+1)=='<') continue;
+    //     else ans += equal.at(i);
+    //   }
+    // }
+
+    rep(i,0,sz) ans += equal.at(i);
+
+    cout << ans << "\n";
+
 
     return 0;
 }

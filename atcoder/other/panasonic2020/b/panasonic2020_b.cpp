@@ -35,7 +35,12 @@ vector<int> dj = {-1,0,1,-1,1,-1,0,1}, di = {-1,-1,-1,0,0,1,1,1};
 
 int main() {
 
-    
+    ll h, w;
+    cin >> h >> w;
+
+    if (h==1 || w==1) cout << 1 << "\n";
+    else if ((h*w)%2==1) cout << (h*w)/2+1 << "\n";
+    else cout << (h*w)/2 << "\n";
 
     return 0;
 }
