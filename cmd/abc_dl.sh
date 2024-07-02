@@ -17,7 +17,7 @@ fi
 WORKDIR="/app"
 CONTEST_DIR="${WORKDIR}/atcoder/abc"
 PROBLEM_DIR="${CONTEST_DIR}/$1"
-TEMPLATE="${WORKDIR}/templates/atcoder.cpp"
+TEMPLATE="${WORKDIR}/templates/template.cpp"
 
 ### abc172のフォルダを作成し，テストデータをダウンロードする
 # コンテストディレクトリが存在しなければ全てダウンロードする
@@ -39,7 +39,7 @@ else
     cd "atcoder/abc/$1/temp/"
     acc new $1 -c all
 
-    problems_list=("a" "b" "c" "d" "e" "f" "h")
+    problems_list=("a" "b" "c" "d" "e" "f" "g" "h")
     for (( i=0; i<${#problems_list[@]}; i++ )); do
         if [ -d "$1/${problems_list[$i]}/tests" ]; then
             cp -r "$1/${problems_list[$i]}/tests" "../../$1/${problems_list[$i]}"
