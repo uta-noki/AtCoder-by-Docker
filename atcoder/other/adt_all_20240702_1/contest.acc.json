@@ -1,0 +1,99 @@
+{
+  "contest": {
+    "id": "adt_all_20240702_1",
+    "title": "AtCoder Daily Training ALL 2024/07/02 15:30start",
+    "url": "https://atcoder.jp/contests/adt_all_20240702_1"
+  },
+  "tasks": [
+    {
+      "id": "abc267_a",
+      "label": "A",
+      "title": "Saturday",
+      "url": "https://atcoder.jp/contests/adt_all_20240702_1/tasks/abc267_a",
+      "directory": {
+        "path": "a",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "abc345_a",
+      "label": "B",
+      "title": "Leftrightarrow",
+      "url": "https://atcoder.jp/contests/adt_all_20240702_1/tasks/abc345_a",
+      "directory": {
+        "path": "b",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "abc355_b",
+      "label": "C",
+      "title": "Piano 2",
+      "url": "https://atcoder.jp/contests/adt_all_20240702_1/tasks/abc355_b",
+      "directory": {
+        "path": "c",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "abc292_b",
+      "label": "D",
+      "title": "Yellow and Red Card",
+      "url": "https://atcoder.jp/contests/adt_all_20240702_1/tasks/abc292_b",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "abc343_c",
+      "label": "E",
+      "title": "343",
+      "url": "https://atcoder.jp/contests/adt_all_20240702_1/tasks/abc343_c",
+      "directory": {
+        "path": "e",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "abc315_c",
+      "label": "F",
+      "title": "Flavors",
+      "url": "https://atcoder.jp/contests/adt_all_20240702_1/tasks/abc315_c",
+      "directory": {
+        "path": "f",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "abc304_d",
+      "label": "G",
+      "title": "A Piece of Cake",
+      "url": "https://atcoder.jp/contests/adt_all_20240702_1/tasks/abc304_d",
+      "directory": {
+        "path": "g",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "abc263_e",
+      "label": "H",
+      "title": "Sugoroku 3",
+      "url": "https://atcoder.jp/contests/adt_all_20240702_1/tasks/abc263_e",
+      "directory": {
+        "path": "h",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "abc347_f",
+      "label": "I",
+      "title": "Non-overlapping Squares",
+      "url": "https://atcoder.jp/contests/adt_all_20240702_1/tasks/abc347_f",
+      "directory": {
+        "path": "i",
+        "testdir": "tests"
+      }
+    }
+  ]
+}
